@@ -1,0 +1,50 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later
+ * ============================================================================
+ * MCPE-Jhysix
+ * Copyright (C) 2026 jeanmajid and contributors
+ * https://github.com/jeanmajid/MCPE-Commands-plus-plus
+ * ============================================================================
+ *
+ * This file is part of MCPE-Jhysix.
+ *
+ * MCPE-Jhysix is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * MCPE-Jhysix is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+{
+    "format_version": "1.26.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "jeanmajid:block_entity",
+            "materials": {
+                "default": "entity_custom"
+            },
+            "textures": {
+                "default": "textures/entity/jeanmajid/physics/empty.png"
+            },
+            "geometry": {
+                "default": "geometry.jeanmajid.physics.block_entity"
+            },
+            "animations": {
+                "move": "animation.jeanmajid.physics.block_entity.move"
+            },
+            "scripts": {
+                "initialize": ["v.rotX=0;v.rotY=0;v.rotZ=0;v.posX=0;v.posY=0;v.posZ=0;v.scale=1;"],
+                "animate": ["move"]
+            },
+            "enable_attachables": true,
+            "held_item_scale": 2.66666667,
+            "render_controllers": ["controller.render.jeanmajid.physics.block_entity"]
+        }
+    }
+}

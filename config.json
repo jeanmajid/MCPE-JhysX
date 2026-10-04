@@ -1,0 +1,7 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jeanmajid/MCPE-Tool/refs/heads/main/public/mcConfigSchema.json",
+    "name": "Jhysix",
+    "description": "",
+    "modules": ["pnpm", "ts"],
+    "id": "bbjtfb5vf2pmupw8cp0"
+}

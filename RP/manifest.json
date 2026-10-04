@@ -1,0 +1,49 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later
+ * ============================================================================
+ * MCPE-Jhysix
+ * Copyright (C) 2026 jeanmajid and contributors
+ * https://github.com/jeanmajid/MCPE-Commands-plus-plus
+ * ============================================================================
+ *
+ * This file is part of MCPE-Jhysix.
+ *
+ * MCPE-Jhysix is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * MCPE-Jhysix is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+{
+    "format_version": 2,
+    "header": {
+        "name": "Jhysix",
+        "description": "",
+        "uuid": "37e07077-2b72-45af-89af-30414866e5db",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 70]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "4da0a07a-e45c-419f-994a-8b6ff6b899b9",
+            "version": [1, 0, 0]
+        }
+    ],
+    "metadata": {
+        "authors": ["jeanmajid"]
+    },
+    "dependencies": [
+        {
+            "uuid": "5beab9a5-dcb2-4f7e-8846-355b1081ff31",
+            "version": "1.0.0"
+        }
+    ]
+}

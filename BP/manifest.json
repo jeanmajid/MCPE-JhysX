@@ -1,0 +1,64 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later
+ * ============================================================================
+ * MCPE-Jhysix
+ * Copyright (C) 2026 jeanmajid and contributors
+ * https://github.com/jeanmajid/MCPE-Commands-plus-plus
+ * ============================================================================
+ *
+ * This file is part of MCPE-Jhysix.
+ *
+ * MCPE-Jhysix is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * MCPE-Jhysix is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+{
+    "format_version": 2,
+    "header": {
+        "name": "Jhysix",
+        "description": "",
+        "uuid": "5beab9a5-dcb2-4f7e-8846-355b1081ff31",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 21, 70]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "28f15a41-168c-4e3a-a324-19b6359580c5",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "uuid": "f388650e-57ee-469e-97d4-e082161d7e55",
+            "version": [1, 0, 0],
+            "language": "javascript",
+            "entry": "scripts/index.js"
+        }
+    ],
+    "metadata": {
+        "authors": ["jeanmajid"]
+    },
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.11.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.3.0-beta"
+        },
+        {
+            "uuid": "37e07077-2b72-45af-89af-30414866e5db",
+            "version": "1.0.0"
+        }
+    ]
+}
