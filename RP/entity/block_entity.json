@@ -21,6 +21,7 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
+
 {
     "format_version": "1.26.0",
     "minecraft:client_entity": {

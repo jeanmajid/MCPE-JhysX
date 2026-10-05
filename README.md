@@ -1,3 +1,5 @@
 # Jhysix
 
-MCPE Physics stuff, the physics engine will be in another repo later when I make it.
+MCPE Physics stuff
+
+The pyshics engine is under BP/scripts/engine and will be pretty specialized for Minecraft for now

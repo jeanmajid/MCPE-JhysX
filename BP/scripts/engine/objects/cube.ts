@@ -21,15 +21,18 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { Vector3 } from "../types/vector";
+import { BaseObject } from "./base";
 
-import { world } from "@minecraft/server";
-import { JhysixWorld } from "./engine/jhysixWorld";
-import { Cube } from "./engine/objects/cube";
-import { McJhysix } from "./minecraft/mcJhysixSync";
+export class Cube implements BaseObject {
+    position: Vector3;
+    mass: number;
+    rotation: Vector3 = { x: 0, y: 0, z: 0 };
+    velocity: Vector3 = { x: 0, y: 0, z: 0 };
+    force: Vector3 = { x: 0, y: 0, z: 0 };
 
-world.afterEvents.worldLoad.subscribe(() => {
-    const world = new JhysixWorld();
-    const cube = new Cube({ x: 0, y: 200, z: 0 }, 1);
-
-    McJhysix.sync(world);
-});
+    constructor(position: Vector3, mass: number) {
+        this.position = position;
+        this.mass = mass;
+    }
+}

@@ -21,15 +21,11 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { JhysixWorld } from "./../engine/jhysixWorld";
 
-import { world } from "@minecraft/server";
-import { JhysixWorld } from "./engine/jhysixWorld";
-import { Cube } from "./engine/objects/cube";
-import { McJhysix } from "./minecraft/mcJhysixSync";
+const BLOCK_ENTITY_TYPE_ID = "jeanmajid:block_entity";
+type Entities = typeof BLOCK_ENTITY_TYPE_ID;
 
-world.afterEvents.worldLoad.subscribe(() => {
-    const world = new JhysixWorld();
-    const cube = new Cube({ x: 0, y: 200, z: 0 }, 1);
-
-    McJhysix.sync(world);
-});
+export class McJhysix {
+    static sync(world: JhysixWorld) {}
+}

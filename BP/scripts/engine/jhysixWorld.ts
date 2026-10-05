@@ -21,15 +21,28 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { BaseObject } from "./objects/base";
+import { Vector3 } from "./types/vector";
+import { Vector } from "./utils/vector";
 
-import { world } from "@minecraft/server";
-import { JhysixWorld } from "./engine/jhysixWorld";
-import { Cube } from "./engine/objects/cube";
-import { McJhysix } from "./minecraft/mcJhysixSync";
+export class JhysixWorld {
+    private objects: Array<BaseObject> = [];
+    public gravity: Vector3 = { x: 0, y: 9.81, z: 0 };
 
-world.afterEvents.worldLoad.subscribe(() => {
-    const world = new JhysixWorld();
-    const cube = new Cube({ x: 0, y: 200, z: 0 }, 1);
+    constructor() {}
 
-    McJhysix.sync(world);
-});
+    addObject(object: BaseObject): void {
+        this.objects.push(object);
+    }
+
+    tick(deltaTime: number): void {
+        for (const object of this.objects) {
+            object.force = Vector.add(object.force, Vector.multiply(this.gravity, object.mass));
+
+            object.velocity = Vector.add(object.velocity, Vector.multiply(Vector.divide(object.force, object.mass), deltaTime));
+            object.position = Vector.add(object.position, Vector.multiply(object.velocity, deltaTime));
+
+            object.force = { x: 0, y: 0, z: 0 };
+        }
+    }
+}
