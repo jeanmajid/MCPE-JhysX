@@ -21,11 +21,14 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { JhysixWorld } from "./../engine/jhysixWorld";
+import { JhysixWorld } from "./../engine/jhysixWorld.js";
 
 const BLOCK_ENTITY_TYPE_ID = "jeanmajid:block_entity";
 type Entities = typeof BLOCK_ENTITY_TYPE_ID;
 
 export class McJhysix {
-    static sync(world: JhysixWorld) {}
+    public static sync(jhysixWorld: JhysixWorld): void {
+        for (const object of jhysixWorld.objects) {
+        }
+    }
 }

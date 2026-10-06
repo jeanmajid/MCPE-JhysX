@@ -21,15 +21,15 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
-
 import { world } from "@minecraft/server";
-import { JhysixWorld } from "./engine/jhysixWorld";
-import { Cube } from "./engine/objects/cube";
-import { McJhysix } from "./minecraft/mcJhysixSync";
+
+import { JhysixWorld } from "./engine/jhysixWorld.js";
+import { Cube } from "./engine/objects/cube.js";
+import { McJhysix } from "./minecraft/mcJhysixSync.js";
 
 world.afterEvents.worldLoad.subscribe(() => {
-    const world = new JhysixWorld();
+    const jhysixWorld = new JhysixWorld();
     const cube = new Cube({ x: 0, y: 200, z: 0 }, 1);
 
-    McJhysix.sync(world);
+    McJhysix.sync(jhysixWorld);
 });

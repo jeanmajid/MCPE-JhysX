@@ -21,7 +21,7 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { Vector2, Vector3 } from "./../types/vector.d";
+import type { Vector2, Vector3 } from "./../types/vector.d.ts";
 
 export class Vector {
     private constructor() {}
@@ -73,7 +73,11 @@ export class Vector {
         return { x: vector.x / magnitude, y: vector.y / magnitude, z: vector.z / magnitude };
     }
 
-    public static locationInfront(location: Vector3, direction: Vector3, distance: number): Vector3 {
+    public static locationInfront(
+        location: Vector3,
+        direction: Vector3,
+        distance: number
+    ): Vector3 {
         return Vector.add(location, Vector.multiply(direction, distance));
     }
 

@@ -21,17 +21,18 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { Vector3 } from "../types/vector";
-import { BaseObject } from "./base";
+import { Vector3 } from "../types/vector.js";
+import { BaseObject } from "./base.js";
 
 export class Cube implements BaseObject {
-    position: Vector3;
-    mass: number;
-    rotation: Vector3 = { x: 0, y: 0, z: 0 };
-    velocity: Vector3 = { x: 0, y: 0, z: 0 };
-    force: Vector3 = { x: 0, y: 0, z: 0 };
+    // TODO move stuff to a base class maybe, so we can have methods like add force
+    public position: Vector3;
+    public mass: number;
+    public rotation: Vector3 = { x: 0, y: 0, z: 0 };
+    public velocity: Vector3 = { x: 0, y: 0, z: 0 };
+    public force: Vector3 = { x: 0, y: 0, z: 0 };
 
-    constructor(position: Vector3, mass: number) {
+    public constructor(position: Vector3, mass: number) {
         this.position = position;
         this.mass = mass;
     }

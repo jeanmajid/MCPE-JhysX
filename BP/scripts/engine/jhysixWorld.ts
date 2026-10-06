@@ -21,26 +21,32 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { BaseObject } from "./objects/base";
-import { Vector3 } from "./types/vector";
-import { Vector } from "./utils/vector";
+import { BaseObject } from "./objects/base.js";
+import { Vector3 } from "./types/vector.js";
+import { Vector } from "./utils/vector.js";
 
 export class JhysixWorld {
-    private objects: Array<BaseObject> = [];
+    public objects: Array<BaseObject> = [];
     public gravity: Vector3 = { x: 0, y: 9.81, z: 0 };
 
-    constructor() {}
+    public constructor() {}
 
-    addObject(object: BaseObject): void {
+    public addObject(object: BaseObject): void {
         this.objects.push(object);
     }
 
-    tick(deltaTime: number): void {
+    public tick(deltaTime: number): void {
         for (const object of this.objects) {
             object.force = Vector.add(object.force, Vector.multiply(this.gravity, object.mass));
 
-            object.velocity = Vector.add(object.velocity, Vector.multiply(Vector.divide(object.force, object.mass), deltaTime));
-            object.position = Vector.add(object.position, Vector.multiply(object.velocity, deltaTime));
+            object.velocity = Vector.add(
+                object.velocity,
+                Vector.multiply(Vector.divide(object.force, object.mass), deltaTime)
+            );
+            object.position = Vector.add(
+                object.position,
+                Vector.multiply(object.velocity, deltaTime)
+            );
 
             object.force = { x: 0, y: 0, z: 0 };
         }

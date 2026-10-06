@@ -21,7 +21,7 @@
  * along with MCPE-Jhysix. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { Vector3 } from "../types/vector";
+import { Vector3 } from "../types/vector.js";
 
 export interface BaseObject {
     position: Vector3;
